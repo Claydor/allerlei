@@ -1,21 +1,26 @@
 public class fakultatRekursiv {
 
-	public static void ( String[] args ) {
-	
-				
+	public static void main ( String[] args ) {
+
+		int n = 6;
+		int ausgabe;
+
+		fakultatRekursiv test = new fakultatRekursiv();
+
+		ausgabe = test.rekursion(n);
+		System.out.println("Die Fakultät von " + (int)n + " ist " + (int)ausgabe + ".");
 	}
 	
 	public int rekursion (int x) {
-	
-		while x
+
+		if ( x <= 1) {
+
+			return 1;
+		}
+		else {
+
+			return ( x * rekursion( x - 1 ));
+		}
 	}
 	
-}
-
-
-
-{
-  wenn n <= 1
-      dann return 1
-  sonst return ( n * fakultät_rekursiv(n-1) )
 }
