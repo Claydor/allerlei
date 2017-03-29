@@ -2,13 +2,24 @@ public class fakultatRekursiv {
 
 	public static void main ( String[] args ) {
 
-		int n = 6;
+		int n = 20;
 		int ausgabe;
+		long startZeit;
+		long endZeit;
 
 		fakultatRekursiv test = new fakultatRekursiv();
+		fakultatIterativ zeit = new fakultatIterativ();
 
+
+		startZeit = zeit.getTime();
 		ausgabe = test.rekursion(n);
-		System.out.println("Die Fakultät von " + (int)n + " ist " + (int)ausgabe + ".");
+		endZeit = zeit.getTime();
+		System.out.println("Die Fakultät von " + (int)n + " ist " + (int)ausgabe + ".\nDie Berechnung hat " + (endZeit - startZeit) + " ms gedauert (Startzeit = " + startZeit + ", Endzeit = " + endZeit + ").\n");
+	}
+	
+	public long getTime() {
+		
+			return System.currentTimeMillis();
 	}
 	
 	public int rekursion (int x) {
